@@ -1,119 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact Us – ProShip Star Logistics</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Contact Us | ProShip Star Logistics LLC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <div class="container">
-      <div class="top-left">ProShip Star Logistics</div>
-      <div class="top-right">
-        <a href="tel:+919999999999">📞 +91 99999 99999</a>
-        <span>|</span>
-        <a href="mailto:info@proshipstar.com">✉ info@proshipstar.com</a>
-      </div>
-    </div>
-  </div>
+    <!-- ===== HEADER / NAVBAR (same on all pages) ===== -->
+    <header class="ps-header">
+        <div class="ps-header-inner">
+            <!-- Logo left -->
+            <a href="index.html" class="ps-logo">
+                <img src="logo.png" alt="ProShip Star Logistics LLC">
+            </a>
 
-  <!-- HEADER -->
-  <header class="main-header">
-    <div class="container header-inner">
-      <div class="logo">
-        <a href="index.html">ProShip <span>Star</span> Logistics</a>
-      </div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a class="active" href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+            <!-- Menu center -->
+            <nav class="ps-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
 
-  <!-- OPTIONAL BANNER -->
-  <section class="page-banner"
-    style="background:url('images/contact-side.jpg') center/cover no-repeat;">
-    <div class="container">
-      <h1>Contact Us</h1>
-      <p>Reach out to our logistics experts.</p>
-    </div>
-  </section>
+                    <!-- SERVICES dropdown like SOLUTIONS -->
+                    <li class="has-dropdown">
+                        <a href="services.html">SERVICES</a>
+                        <ul class="dropdown">
+                            <li><a href="services.html#express">EXPRESS</a></li>
+                            <li><a href="services.html#air-freight">AIR FREIGHT</a></li>
+                            <li><a href="services.html#sea-freight">SEA FREIGHT</a></li>
+                            <li><a href="services.html#road-freight">ROAD FREIGHT</a></li>
+                            <li><a href="services.html#warehousing">WAREHOUSING</a></li>
+                            <li><a href="services.html#custom-clearance">CUSTOM CLEARANCE</a></li>
+                        </ul>
+                    </li>
 
-  <!-- CONTACT GRID -->
-  <section>
-    <div class="container contact-grid">
-      <!-- LEFT: FORM -->
-      <div>
-        <h2>Send us a Message</h2>
-        <p style="font-size:14px; margin:8px 0 16px;">
-          Fill in your details and we will get back to you shortly.
-        </p>
-        <form>
-          <input type="text" placeholder="Name">
-          <input type="email" placeholder="Email">
-          <input type="tel" placeholder="Phone">
-          <textarea rows="4" placeholder="Message"></textarea>
-          <button type="submit" class="btn">Submit</button>
-        </form>
-      </div>
+                    <li><a href="contact.html" class="active">CONTACT US</a></li>
+                </ul>
+            </nav>
 
-      <!-- RIGHT: CONTACT INFO -->
-      <div class="contact-info">
-        <h2>Contact Details</h2>
-        <p>
-          <strong>Address:</strong><br>
-          Kanpur, Uttar Pradesh, India
-        </p>
-        <p>
-          <strong>Phone:</strong><br>
-          <a href="tel:+919999999999">+91 99999 99999</a>
-        </p>
-        <p>
-          <strong>Email:</strong><br>
-          <a href="mailto:info@proshipstar.com">info@proshipstar.com</a>
-        </p>
-      </div>
-    </div>
-  </section>
+            <!-- Right side: phone + email + whatsapp -->
+            <div class="ps-nav-contact">
+                <a href="tel:+971567038636" class="ps-nav-phone">
+                    <span class="ps-icon-phone"></span>
+                    +971 56 7038 636
+                </a>
+                <a href="mailto:info@proshipstar.com" class="ps-nav-email">
+                    <span class="ps-icon-mail"></span>
+                    info@proshipstar.com
+                </a>
+                <a href="https://wa.me/971567038636" target="_blank" class="ps-nav-whatsapp">
+                    <img src="whatsapp-icon.png" alt="WhatsApp">
+                </a>
+            </div>
+        </div>
+    </header>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <h4>ProShip Star Logistics</h4>
-        <p>End-to-end freight, warehousing and distribution solutions.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Useful Links</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p>Kanpur, Uttar Pradesh, India</p>
-        <p>Phone: +91 99999 99999</p>
-        <p>Email: info@proshipstar.com</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>© 2025 ProShip Star Logistics. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+    <!-- ===== CONTACT PAGE HERO BANNER (dark like screenshot) ===== -->
+    <section class="ps-page-hero ps-page-hero-contact">
+        <div class="ps-page-hero-inner">
+            <h1>CONTACT US</h1>
 
-  <a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank" rel="noopener">
-    <img src="images/whatsapp.png" alt="WhatsApp">
-  </a>
+            <div class="ps-page-hero-right">
+                <div class="ps-hero-circle">
+                    <span class="ps-icon-mail-big"></span>
+                </div>
+                <div class="ps-hero-text">
+                    <p>WE ARE JUST A CALL AWAY</p>
+                </div>
+                <div class="ps-hero-circle">
+                    <span class="ps-icon-phone-big"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ps-breadcrumb">
+            ProShip Star Logistics &gt; Contact Us
+        </div>
+    </section>
+
+    <!-- ===== CONTACT FORM SECTION (2 column like Flexigistic) ===== -->
+    <section class="ps-contact-section">
+        <div class="ps-contact-inner">
+
+            <!-- LEFT: form -->
+            <div class="ps-contact-form">
+                <h2>Get in touch with us</h2>
+
+                <form action="#" method="post">
+                    <div class="ps-form-row">
+                        <div class="ps-field">
+                            <label for="first-name">First Name<span>*</span></label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="ps-field">
+                            <label for="last-name">Last Name<span>*</span></label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                    </div>
+
+                    <div class="ps-form-row">
+                        <div class="ps-field">
+                            <label for="email">Email<span>*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="ps-field">
+                            <label for="phone">Phone<span>*</span></label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="ps-form-row">
+                        <div class="ps-field">
+                            <label for="subject">Message subject<span>*</span></label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="ps-field ps-empty-field">
+                            <!-- blank, Flexigistic style alignment -->
+                        </div>
+                    </div>
+
+                    <div class="ps-form-row ps-form-row-full">
+                        <div class="ps-field">
+                            <label for="message">Message<span>*</span></label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="ps-form-row ps-form-row-full">
+                        <div class="ps-captcha-placeholder">
+                            <input type="checkbox" id="not-robot">
+                            <label for="not-robot">I'm not a robot</label>
+                        </div>
+                    </div>
+
+                    <div class="ps-form-row ps-form-row-full">
+                        <button type="submit" class="ps-btn ps-btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- RIGHT: image + contact details -->
+            <div class="ps-contact-info">
+                <div class="ps-contact-photo">
+                    <!-- apni image laga sakte ho -->
+                    <img src="contact-banner.jpg" alt="ProShip Star Logistics">
+                </div>
+
+                <div class="ps-contact-text">
+                    <p>
+                        If you have any questions about ProShip Star Logistics LLC or how we can support your business,
+                        please contact us using the form or reach out directly using the details below.
+                    </p>
+
+                    <h3>Contact Details</h3>
+                    <p>
+                        Office No. 602, Al Saud Building,<br>
+                        Al Qusais 4, Dubai, U.A.E
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong> <a href="tel:+971567038636">+971 56 7038 636</a><br>
+                        <strong>Email:</strong> <a href="mailto:info@proshipstar.com">info@proshipstar.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER (same on all pages) ===== -->
+    <footer class="ps-footer">
+        <div class="ps-footer-inner">
+            <div class="ps-footer-col">
+                <img src="logo.png" alt="ProShip Star Logistics LLC" class="ps-footer-logo">
+                <p>Your cargo, our commitment.</p>
+            </div>
+
+            <div class="ps-footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="ps-footer-col">
+                <h4>Contact Us</h4>
+                <p>
+                    Office No. 602, Al Saud Building,<br>
+                    Al Qusais 4, Dubai, U.A.E
+                </p>
+                <p>
+                    <strong>Phone:</strong> <a href="tel:+971567038636">+971 56 7038 636</a><br>
+                    <strong>Email:</strong> <a href="mailto:info@proshipstar.com">info@proshipstar.com</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="ps-footer-bottom">
+            © 2025 ProShip Star Logistics LLC. All Rights Reserved.
+        </div>
+    </footer>
+
 </body>
 </html>
