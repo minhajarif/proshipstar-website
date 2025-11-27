@@ -2,111 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ProShip Star Logistics – Home</title>
+  <title>ProShip Star Logistics LLC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css"><!-- yaha styles.css -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <div class="container">
-      <div class="top-left">ProShip Star Logistics</div>
-      <div class="top-right">
-        <a href="tel:+919999999999">📞 +91 99999 99999</a>
-        <span>|</span>
-        <a href="mailto:info@proshipstar.com">✉ info@proshipstar.com</a>
-      </div>
-    </div>
-  </div>
-
   <!-- HEADER / NAVBAR -->
-  <header class="main-header">
-    <div class="container header-inner">
-      <div class="logo">
-        <a href="index.html">ProShip <span>Star</span> Logistics</a>
-      </div>
-      <nav class="navbar">
+  <header class="ps-header">
+    <div class="ps-header-inner">
+      <!-- Logo -->
+      <a href="index.html" class="ps-logo">
+        <img src="logo.png" alt="ProShip Star Logistics LLC">
+      </a>
+
+      <!-- Center Menu -->
+      <nav class="ps-nav">
         <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.html" class="active">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li class="has-dropdown">
+            <a href="services.html">SERVICES</a>
+            <ul class="dropdown">
+              <li><a href="services.html#express">EXPRESS</a></li>
+              <li><a href="services.html#air-freight">AIR FREIGHT</a></li>
+              <li><a href="services.html#sea-freight">SEA FREIGHT</a></li>
+              <li><a href="services.html#road-freight">ROAD FREIGHT</a></li>
+              <li><a href="services.html#warehousing">WAREHOUSING</a></li>
+              <li><a href="services.html#custom-clearance">CUSTOM CLEARANCE</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">CONTACT US</a></li>
         </ul>
       </nav>
+
+      <!-- Right: Phone + Email + WhatsApp -->
+      <div class="ps-nav-contact">
+        <a href="tel:+971567038636">
+          <span class="ps-icon-phone"></span>
+          +971 56 7038 636
+        </a>
+        <a href="mailto:info@proshipstar.com">
+          <span class="ps-icon-mail"></span>
+          info@proshipstar.com
+        </a>
+        <a href="https://wa.me/971567038636" target="_blank" class="ps-nav-whatsapp">
+          <img src="whatsapp-icon.png" alt="WhatsApp">
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- HERO SLIDER -->
-  <section class="hero-slider">
-    <div class="slider">
-      <div class="slide active">
-        <img src="home-slide1.jpg" alt="Logistics 1">
-        <div class="slide-text">
-          <h1>Smart Logistics, Faster Deliveries</h1>
-          <p>Air, sea and road freight solutions tailored to your business.</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="home-slide2.jpg" alt="Logistics 2">
-        <div class="slide-text">
-          <h1>Connecting Ports to People</h1>
-          <p>Reliable global shipping with clear visibility.</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="home-slide3.jpg" alt="Logistics 3">
-        <div class="slide-text">
-          <h1>Door-to-Door Transport</h1>
-          <p>From warehouse to customer – handled end-to-end.</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="home-slide4.jpg" alt="Logistics 4">
-        <div class="slide-text">
-          <h1>Secure Warehousing & 3PL</h1>
-          <p>Safe, efficient and scalable storage solutions.</p>
+  <!-- HERO SLIDER (Flexigistic type) -->
+  <section class="ps-hero-slider">
+    <div class="ps-hero-slide active" style="background-image:url('home-slide1.jpg');">
+      <div class="ps-hero-overlay"></div>
+      <div class="ps-hero-content">
+        <h1>SUPPLY CHAIN MADE EASY</h1>
+        <p>
+          ProShip Star Logistics – Empowering trade through speed and service.
+          Fast, reliable, and customized air, sea and road freight solutions
+          across the Middle East and global markets.
+        </p>
+        <p>
+          Through strong partnerships with leading airlines, shipping lines and
+          transport networks, we ensure priority handling, competitive rates
+          and on-time delivery for every shipment.
+        </p>
+        <div class="ps-hero-buttons">
+          <a href="services.html" class="ps-btn ps-btn-primary">Our Services</a>
+          <a href="contact.html" class="ps-btn ps-btn-outline">Contact Us</a>
         </div>
       </div>
     </div>
+
+    <div class="ps-hero-slide" style="background-image:url('home-slide2.jpg');">
+      <div class="ps-hero-overlay"></div>
+      <div class="ps-hero-content">
+        <h1>YOUR CARGO, OUR COMMITMENT</h1>
+        <p>
+          Backed by advanced tracking technology, expert customs clearance and
+          efficient warehousing, we provide a seamless logistics experience
+          from pickup to final delivery.
+        </p>
+        <p>
+          We combine innovation, expertise and dedication to make every shipment
+          swift, secure and stress-free.
+        </p>
+        <div class="ps-hero-buttons">
+          <a href="about.html" class="ps-btn ps-btn-primary">Know More</a>
+          <a href="contact.html" class="ps-btn ps-btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ps-hero-slide" style="background-image:url('home-slide3.jpg');">
+      <div class="ps-hero-overlay"></div>
+      <div class="ps-hero-content">
+        <h1>GLOBAL REACH, LOCAL EXPERTISE</h1>
+        <p>
+          Dedicated operations and customer service team with over 12–15 years
+          of UAE logistics experience.
+        </p>
+        <div class="ps-hero-buttons">
+          <a href="services.html" class="ps-btn ps-btn-primary">Explore Solutions</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ps-hero-slide" style="background-image:url('home-slide4.jpg');">
+      <div class="ps-hero-overlay"></div>
+      <div class="ps-hero-content">
+        <h1>END-TO-END LOGISTICS</h1>
+        <p>
+          From express shipments to warehousing and customs clearance, ProShip
+          Star Logistics manages your supply chain under one roof.
+        </p>
+      </div>
+    </div>
+
+    <div class="ps-hero-dots"></div>
   </section>
 
-  <!-- HOME – SERVICES SECTION -->
-  <section class="home-services">
-    <div class="container">
-      <h2>Our Core Services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Air Freight</h3>
-          <p>Time-critical international deliveries with end-to-end tracking.</p>
-        </div>
-        <div class="service-card">
-          <h3>Ocean Freight</h3>
-          <p>Cost-effective sea freight for full and part loads.</p>
-        </div>
-        <div class="service-card">
-          <h3>Road Transport</h3>
-          <p>Pan-India and cross-border trucking network.</p>
-        </div>
-        <div class="service-card">
-          <h3>Warehousing & 3PL</h3>
-          <p>Storage, inventory management and distribution services.</p>
-        </div>
+  <!-- SERVICES CARDS (orange – like Flexigistic) -->
+  <section class="ps-services-home">
+    <div class="ps-section-inner">
+      <h2>OUR CORE SERVICES</h2>
+      <div class="ps-services-grid">
+        <a href="services.html#express" class="ps-service-card">
+          <h3>EXPRESS</h3>
+          <p>Time-critical courier and express solutions for urgent deliveries.</p>
+        </a>
+        <a href="services.html#air-freight" class="ps-service-card">
+          <h3>AIR FREIGHT</h3>
+          <p>Priority air cargo services with competitive rates and fast transit.</p>
+        </a>
+        <a href="services.html#sea-freight" class="ps-service-card">
+          <h3>SEA FREIGHT</h3>
+          <p>FCL &amp; LCL services connecting key global ports.</p>
+        </a>
+        <a href="services.html#road-freight" class="ps-service-card">
+          <h3>ROAD FREIGHT</h3>
+          <p>Flexible road transport across UAE and GCC.</p>
+        </a>
+        <a href="services.html#warehousing" class="ps-service-card">
+          <h3>WAREHOUSING</h3>
+          <p>Secure storage, inventory handling and value-added services.</p>
+        </a>
+        <a href="services.html#custom-clearance" class="ps-service-card">
+          <h3>CUSTOM CLEARANCE</h3>
+          <p>Hassle-free documentation and customs compliance.</p>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <h4>ProShip Star Logistics</h4>
-        <p>End-to-end freight, warehousing and distribution solutions.</p>
+  <footer class="ps-footer">
+    <div class="ps-footer-inner">
+      <div class="ps-footer-col">
+        <img src="logo.png" alt="ProShip Star Logistics LLC" class="ps-footer-logo">
+        <p>Your cargo, our commitment.</p>
       </div>
-      <div class="footer-col">
+      <div class="ps-footer-col">
         <h4>Useful Links</h4>
         <ul>
           <li><a href="about.html">About Us</a></li>
@@ -114,42 +172,23 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p>Kanpur, Uttar Pradesh, India</p>
-        <p>Phone: +91 99999 99999</p>
-        <p>Email: info@proshipstar.com</p>
+      <div class="ps-footer-col">
+        <h4>Contact Us</h4>
+        <p>
+          Office No. 602, Al Saud Building,<br>
+          Al Qusais 4, Dubai, U.A.E
+        </p>
+        <p>
+          <strong>Phone:</strong> <a href="tel:+971567038636">+971 56 7038 636</a><br>
+          <strong>Email:</strong> <a href="mailto:info@proshipstar.com">info@proshipstar.com</a>
+        </p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>© 2025 ProShip Star Logistics. All rights reserved.</p>
-      </div>
+    <div class="ps-footer-bottom">
+      © 2025 ProShip Star Logistics LLC. All Rights Reserved.
     </div>
   </footer>
 
-  <!-- WHATSAPP FLOAT BUTTON -->
-  <a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank" rel="noopener">
-    <img src="whatsapp-icon.png" alt="WhatsApp">
-  </a>
-
-  <!-- SLIDER SCRIPT -->
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll(".slide");
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === index);
-      });
-    }
-
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    }
-
-    setInterval(nextSlide, 4000);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
