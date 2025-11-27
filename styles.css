@@ -1,411 +1,613 @@
-/* ===== HEADER / NAVBAR ===== */
+/* RESET + BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Utilities */
+.ps-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 15px;
+}
+
+/* ================= HEADER / NAVBAR ================= */
 
 .ps-header {
-    background: #ffffff;
-    border-bottom: 1px solid #e6e6e6;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .ps-header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .ps-logo img {
-    height: 52px;
-    object-fit: contain;
+  height: 60px;
+  object-fit: contain;
 }
 
 .ps-nav ul {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
 .ps-nav a {
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #333;
-    padding: 8px 0;
-    position: relative;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #333;
+  padding: 8px 0;
+  position: relative;
 }
 
 .ps-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background: #f3a11b; /* orange underline */
-    transition: width 0.25s ease;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #f3a11b;
+  transition: width 0.25s ease;
 }
 
 .ps-nav a:hover::after,
 .ps-nav a.active::after {
-    width: 100%;
+  width: 100%;
 }
 
-/* dropdown (SERVICES) */
+/* Dropdown */
 .has-dropdown {
-    position: relative;
+  position: relative;
 }
 
 .has-dropdown .dropdown {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    min-width: 220px;
-    background: #1c2331;
-    padding: 10px 0;
-    display: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: #1c2331;
+  padding: 10px 0;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
 .has-dropdown:hover .dropdown {
-    display: block;
+  display: block;
 }
 
 .has-dropdown .dropdown li a {
-    display: block;
-    padding: 8px 16px;
-    color: #ffffff;
-    font-size: 13px;
-    letter-spacing: 0.05em;
+  display: block;
+  padding: 8px 16px;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
 }
 
 .has-dropdown .dropdown li a:hover {
-    background: #f3a11b;
-    color: #1c2331;
+  background: #f3a11b;
+  color: #1c2331;
 }
 
-/* right side contact + whatsapp in navbar */
+/* Right contact area */
 .ps-nav-contact {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 13px;
 }
 
 .ps-nav-contact a {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
 }
 
 .ps-nav-contact a:hover {
-    color: #f3a11b;
+  color: #f3a11b;
 }
 
-/* simple icons via CSS circles/lines, you can replace with fontawesome later */
+/* Simple icons */
 .ps-icon-phone,
 .ps-icon-mail {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    border: 1px solid #f3a11b;
-    position: relative;
-}
-
-.ps-icon-phone::before,
-.ps-icon-mail::before {
-    content: "";
-    position: absolute;
-    inset: 4px;
-    border-radius: 50%;
-    border: 2px solid #f3a11b;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #f3a11b;
 }
 
 .ps-nav-whatsapp img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
 }
 
-/* ===== PAGE HERO (ABOUT / CONTACT) ===== */
+/* ================= HERO SLIDER ================= */
+
+.ps-hero-slider {
+  position: relative;
+  height: 70vh;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.ps-hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.ps-hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ps-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+}
+
+.ps-hero-content {
+  position: relative;
+  max-width: 650px;
+  padding: 40px 15px;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.ps-hero-content h1 {
+  font-size: 36px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.ps-hero-content p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.ps-hero-buttons {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+}
+
+/* Slider dots */
+.ps-hero-dots {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.ps-hero-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.ps-hero-dots span.active {
+  background: #f3a11b;
+  border-color: #f3a11b;
+  opacity: 1;
+}
+
+/* BUTTONS */
+.ps-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.ps-btn-primary {
+  background: #f3a11b;
+  border-color: #f3a11b;
+  color: #1c2331;
+}
+
+.ps-btn-primary:hover {
+  background: #d78f15;
+  border-color: #d78f15;
+}
+
+.ps-btn-outline {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.ps-btn-outline:hover {
+  background: #fff;
+  color: #1c2331;
+}
+
+/* ================= HOME SERVICES CARDS ================= */
+
+.ps-services-home {
+  background: #f4f4f4;
+}
+
+.ps-services-home h2 {
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.ps-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.ps-service-card {
+  background: #f3a11b;
+  color: #fff;
+  padding: 20px 18px;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ps-service-card h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.ps-service-card p {
+  font-size: 14px;
+}
+
+.ps-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* ================= PAGE HERO (ABOUT, CONTACT, SERVICES) ================= */
 
 .ps-page-hero {
-    background: #1f2733;
-    color: #ffffff;
-    padding: 45px 15px 30px;
-    position: relative;
+  background: #1f2733;
+  color: #ffffff;
+  padding: 45px 15px 30px;
+}
+
+.ps-about-hero {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.ps-about-hero .ps-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
 }
 
 .ps-page-hero-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.ps-page-hero h1 {
-    font-size: 32px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+.ps-page-hero-inner h1 {
+  font-size: 32px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ps-page-hero-contact {
+  background: #1f2733;
 }
 
 .ps-page-hero-right {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 .ps-hero-circle {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 2px solid #ffffff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
 }
 
 .ps-hero-text p {
-    font-size: 16px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-/* big icons placeholders */
-.ps-icon-mail-big,
-.ps-icon-phone-big {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-/* breadcrumb under hero */
 .ps-breadcrumb {
-    max-width: 1200px;
-    margin: 8px auto 0;
-    font-size: 12px;
-    color: #c7c7c7;
+  max-width: 1200px;
+  margin: 8px auto 0;
+  font-size: 12px;
+  color: #c7c7c7;
 }
 
-/* ===== CONTACT SECTION ===== */
+/* ================= ABOUT CONTENT ================= */
+
+.ps-about-content p {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.ps-about-content h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ================= SERVICES PAGE DETAILS ================= */
+
+.ps-services-list .ps-service-detail {
+  margin-bottom: 24px;
+}
+
+.ps-services-list h2 {
+  font-size: 20px;
+  margin-bottom: 6px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ================= CONTACT PAGE ================= */
 
 .ps-contact-section {
-    background: #f4f4f4;
-    padding: 40px 15px 60px;
+  background: #f4f4f4;
+  padding: 40px 15px 60px;
 }
 
 .ps-contact-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1.3fr;
-    gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1.3fr;
+  gap: 40px;
 }
 
 .ps-contact-form h2 {
-    font-size: 20px;
-    margin-bottom: 18px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #333;
+  font-size: 20px;
+  margin-bottom: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #333;
 }
 
 .ps-form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 14px;
 }
 
 .ps-form-row-full {
-    grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
 }
 
 .ps-field label {
-    display: block;
-    font-size: 13px;
-    margin-bottom: 4px;
-    color: #555;
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #555;
 }
 
 .ps-field label span {
-    color: #c0392b;
+  color: #c0392b;
 }
 
 .ps-field input,
 .ps-field textarea {
-    width: 100%;
-    padding: 8px 10px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    border-radius: 2px;
-    outline: none;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  border-radius: 2px;
+  outline: none;
 }
 
 .ps-field input:focus,
 .ps-field textarea:focus {
-    border-color: #f3a11b;
+  border-color: #f3a11b;
 }
 
 .ps-empty-field {
-    visibility: hidden; /* layout ke liye */
+  visibility: hidden;
 }
 
-/* fake captcha */
+/* Fake captcha */
 .ps-captcha-placeholder {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #666;
 }
 
-.ps-btn {
-    display: inline-block;
-    padding: 10px 24px;
-    border-radius: 2px;
-    border: none;
-    font-size: 13px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.ps-btn-primary {
-    background: #f3a11b;
-    color: #1f2733;
-}
-
-.ps-btn-primary:hover {
-    background: #d78f15;
-}
-
-/* right side info */
+/* Right column */
 .ps-contact-photo img {
-    width: 100%;
-    display: block;
-    border-radius: 2px;
-    margin-bottom: 18px;
+  width: 100%;
+  border-radius: 2px;
+  margin-bottom: 18px;
 }
 
 .ps-contact-text p {
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: #444;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #444;
 }
 
 .ps-contact-text h3 {
-    font-size: 16px;
-    margin: 10px 0;
+  font-size: 16px;
+  margin: 10px 0;
 }
 
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
 
 .ps-footer {
-    background: #181e27;
-    color: #f2f2f2;
-    padding: 35px 15px 18px;
-    margin-top: 40px;
+  background: #181e27;
+  color: #f2f2f2;
+  padding: 35px 15px 18px;
+  margin-top: 40px;
 }
 
 .ps-footer-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1.4fr;
-    gap: 30px;
-    font-size: 14px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.4fr;
+  gap: 30px;
+  font-size: 14px;
 }
 
 .ps-footer-logo {
-    height: 42px;
-    margin-bottom: 8px;
+  height: 42px;
+  margin-bottom: 8px;
 }
 
 .ps-footer-col h4 {
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    margin-bottom: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
 }
 
 .ps-footer-col ul li + li {
-    margin-top: 6px;
+  margin-top: 6px;
 }
 
 .ps-footer-col a {
-    color: #f2f2f2;
+  color: #f2f2f2;
 }
 
 .ps-footer-col a:hover {
-    color: #f3a11b;
+  color: #f3a11b;
 }
 
 .ps-footer-bottom {
-    max-width: 1200px;
-    margin: 10px auto 0;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    font-size: 12px;
-    text-align: center;
+  max-width: 1200px;
+  margin: 10px auto 0;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 12px;
+  text-align: center;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
-    .ps-header-inner {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .ps-header-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .ps-nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .ps-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .ps-nav-contact {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .ps-nav-contact {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .ps-contact-inner {
-        grid-template-columns: 1fr;
-    }
+  .ps-contact-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .ps-hero-slider {
+    height: auto;
+    min-height: 360px;
+  }
+
+  .ps-hero-content {
+    top: auto;
+    transform: none;
+    padding: 40px 15px 80px;
+  }
 }
 
-@media (max-width: 600px) {
-    .ps-form-row {
-        grid-template-columns: 1fr;
-    }
-
-    .ps-footer-inner {
-        grid-template-columns: 1fr;
-        text-align: left;
-    }
-
-    .ps-page-hero-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .ps-page-hero-right {
-        gap: 10px;
-    }
+@media (max-width: 700px) {
+  .ps-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+@media (max-width: 520px) {
+  .ps-services-grid {
+    grid-template-columns: 1fr;
+  }
 
+  .ps-footer-inner {
+    grid-template-columns: 1fr;
+  }
 
-/* ===== HEADER / NAVBAR ===== */
-.ps-header {
-    ...
+  .ps-page-hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .ps-page-hero-right {
+    gap: 10px;
+  }
+
+  .ps-form-row {
+    grid-template-columns: 1fr;
+  }
 }
-...
-@media (max-width: 600px) {
-    ...
-}
-
-
-
