@@ -8,21 +8,6 @@ if (navToggle && navLinks) {
   });
 }
 
-// About section default hidden; click par show
-const aboutLink = document.querySelector('a[href="#about"]');
-const aboutSection = document.getElementById("about");
-
-if (aboutLink && aboutSection) {
-  // hide initially
-  aboutSection.style.display = "none";
-
-  aboutLink.addEventListener("click", (e) => {
-    e.preventDefault();
-    aboutSection.style.display = "block";
-    aboutSection.scrollIntoView({ behavior: "smooth" });
-  });
-}
-
 // Footer year
 const yearSpan = document.getElementById("year");
 if (yearSpan) {
