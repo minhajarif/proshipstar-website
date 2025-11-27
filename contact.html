@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us – ProShip Star Logistics LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- SAME NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html#home" class="logo-left">
+        <img src="logo.png" alt="ProShip logo" />
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#home">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="index.html#services">SERVICES</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle">☰</button>
+    </div>
+  </header>
+
+  <!-- CONTACT CONTENT -->
+  <section class="section bg-light">
+    <div class="container contact-grid">
+      <div>
+        <h2>Contact Us</h2>
+        <p>
+          Have a shipment, project, or logistics requirement? Reach out and
+          our team will assist you with the best solution.
+        </p>
+
+        <p><strong>Office:</strong> Office number 602, Al Saud building,<br>Al Quasis 4, Dubai</p>
+        <p><strong>Contact no:</strong> +971 56 7038 636</p>
+        <p><strong>Email ID:</strong> info@proshipstar.com</p>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input id="name" type="text" placeholder="Enter your name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" placeholder="Enter your email" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" placeholder="Tell us about your requirement"></textarea>
+        </div>
+        <button type="submit" class="btn primary-btn full-width">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-bottom">
+      © <span id="year"></span> ProShip Star Logistics LLC. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
