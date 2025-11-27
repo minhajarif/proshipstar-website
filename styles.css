@@ -395,3 +395,17 @@
         gap: 10px;
     }
 }
+
+
+
+/* ===== HEADER / NAVBAR ===== */
+.ps-header {
+    ...
+}
+...
+@media (max-width: 600px) {
+    ...
+}
+
+
+
