@@ -1,94 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>About Us – ProShip Star Logistics LLC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>About Us – ProShip Star Logistics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- SAME NAVBAR -->
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a href="index.html#home" class="logo-left">
-        <img src="logo.png" alt="ProShip logo" />
-      </a>
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html#home">HOME</a>
-        <a href="about.html">ABOUT US</a>
-        <a href="index.html#services">SERVICES</a>
-        <a href="contact.html">CONTACT</a>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-left">ProShip Star Logistics</div>
+      <div class="top-right">
+        <a href="tel:+919999999999">📞 +91 99999 99999</a>
+        <span>|</span>
+        <a href="mailto:info@proshipstar.com">✉ info@proshipstar.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">ProShip <span>Star</span> Logistics</a>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
       </nav>
-      <button class="nav-toggle" id="navToggle">☰</button>
     </div>
   </header>
 
-  <!-- ABOUT CONTENT -->
-  <section class="section">
-    <div class="container about-wrapper">
-
-      <div class="about-main">
-        <h2>About Us</h2>
-        <h3>ProShip Star Logistics LLC – Your Cargo, Our Commitment</h3>
-
-        <p>
-          Based in Dubai, ProShip Star Logistics LLC is a fast-growing logistics
-          and freight forwarding company delivering reliable, efficient, and
-          customized supply chain solutions across the globe.
-        </p>
-        <p>
-          Backed by a young, dynamic customer service and operations team with
-          over 12–15 years of UAE logistics experience, we combine energy,
-          expertise, and innovation to ensure every shipment moves with speed,
-          precision, and care.
-        </p>
-        <p>
-          At ProShip, logistics isn’t just about moving cargo — it’s about
-          connecting businesses, empowering trade, and building long-term trust.
-          With advanced technology, global partnerships, and seamless
-          coordination, we make your logistics simple, transparent, and
-          stress-free.
-        </p>
-        <p>
-          We specialize in Air Freight, Sea Freight, and Road Freight,
-          supported by customs clearance, warehousing, and distribution solutions
-          — all designed to keep your supply chain smooth and efficient.
-        </p>
-      </div>
-
-      <div class="about-side">
-        <h3>Our Mission</h3>
-        <p>
-          To simplify global trade by delivering smart, cost-effective, and
-          dependable logistics solutions that help businesses grow beyond
-          borders.
-        </p>
-
-        <h3>Our Vision</h3>
-        <p>
-          To be the most trusted and customer-focused logistics partner in the
-          Middle East — driven by speed, transparency, and service excellence.
-        </p>
-
-        <h3>Our Core Values</h3>
-        <ul class="values-list">
-          <li><strong>Commitment:</strong> Your cargo, our priority — every time.</li>
-          <li><strong>Integrity:</strong> Honest, transparent, and accountable operations.</li>
-          <li><strong>Excellence:</strong> Consistent quality through innovation and experience.</li>
-          <li><strong>Customer Focus:</strong> Personalized solutions for every logistics need.</li>
-        </ul>
-      </div>
-
+  <!-- BANNER -->
+  <section class="page-banner"
+    style="background:url('images/about-banner.jpg') center/cover no-repeat;">
+    <div class="container">
+      <h1>About Us</h1>
+      <p>We simplify your supply chain with smart logistics.</p>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container footer-bottom">
-      © <span id="year"></span> ProShip Star Logistics LLC. All rights reserved.
+  <!-- CONTENT -->
+  <section>
+    <div class="container">
+      <h2>Who We Are</h2>
+      <p style="font-size:14px; line-height:1.7; margin-top:8px;">
+        ProShip Star Logistics is a growing logistics and supply chain partner,
+        offering air, sea and road freight along with warehousing and
+        distribution. Our focus is on transparent communication, on-time
+        delivery and reliable execution.
+      </p>
+
+      <h2 style="margin-top:24px;">Our Mission</h2>
+      <p style="font-size:14px; line-height:1.7; margin-top:8px;">
+        To make logistics simple for businesses of all sizes by providing
+        technology-enabled, end-to-end services at competitive prices.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER (same as index) -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>ProShip Star Logistics</h4>
+        <p>End-to-end freight, warehousing and distribution solutions.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Kanpur, Uttar Pradesh, India</p>
+        <p>Phone: +91 99999 99999</p>
+        <p>Email: info@proshipstar.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 ProShip Star Logistics. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank" rel="noopener">
+    <img src="images/whatsapp.png" alt="WhatsApp">
+  </a>
 </body>
 </html>
