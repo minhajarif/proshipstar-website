@@ -39,11 +39,18 @@ body {
   gap: 1rem;
 }
 
-/* Left menu */
+/* Logo left */
+.logo-left img {
+  height: 55px;
+  width: auto;
+}
+
+/* Center links */
 .nav-links {
   display: flex;
   gap: 1.6rem;
   align-items: center;
+  margin: 0 auto;
 }
 
 .nav-links a {
@@ -56,12 +63,6 @@ body {
 
 .nav-links a:hover {
   color: #f39c12;
-}
-
-/* Right logo */
-.logo-right img {
-  height: 55px;
-  width: auto;
 }
 
 /* Mobile button */
@@ -117,7 +118,7 @@ body {
 .services-strip {
   background: #f39c12;
   padding: 1.5rem 0 2rem;
-  margin-top: -3rem; /* hero ke niche overlap jaisa Flexigistic */
+  margin-top: -3rem;
 }
 
 .services-grid {
@@ -162,7 +163,7 @@ body {
   background: #f2f5fb;
 }
 
-/* ABOUT layout (2 column) */
+/* ABOUT / CONTACT WRAPPERS */
 
 .about-wrapper {
   display: grid;
@@ -204,7 +205,7 @@ body {
   margin-bottom: 0.35rem;
 }
 
-/* CONTACT */
+/* CONTACT PAGE */
 
 .contact-grid {
   display: grid;
@@ -267,39 +268,13 @@ body {
 .footer {
   background: #0d2235;
   color: #d3ddf0;
-  padding-top: 2rem;
   margin-top: 2rem;
 }
 
-.footer-content {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr 1.1fr;
-  gap: 2rem;
-  padding-bottom: 1.3rem;
-  font-size: 0.86rem;
-}
-
-.footer-logo img {
-  height: 40px;
-  margin-bottom: 0.5rem;
-}
-
 .footer-bottom {
-  border-top: 1px solid #233549;
   text-align: center;
-  padding: 0.7rem 0;
+  padding: 0.8rem 0;
   font-size: 0.8rem;
-}
-
-.footer-links a {
-  display: block;
-  color: #d3ddf0;
-  text-decoration: none;
-  margin-bottom: 0.3rem;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -310,12 +285,11 @@ body {
   }
 
   .about-wrapper,
-  .contact-grid,
-  .footer-content {
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
-  .logo-right img {
+  .logo-left img {
     height: 48px;
   }
 }
@@ -347,7 +321,7 @@ body {
     display: flex;
   }
 
-  .logo-right img {
+  .logo-left img {
     height: 42px;
   }
 
