@@ -1,4 +1,5 @@
-/* RESET + BASE */
+/* =============== GLOBAL STYLES =============== */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +8,13 @@
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f5f5;
   color: #222;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
 }
 
 img {
@@ -21,593 +22,442 @@ img {
   display: block;
 }
 
-/* Utilities */
-.ps-section-inner {
+.container {
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 15px;
 }
 
-/* ================= HEADER / NAVBAR ================= */
+/* =============== NAVBAR =============== */
 
-.ps-header {
-  background: #ffffff;
-  border-bottom: 1px solid #e6e6e6;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.ps-header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 15px;
+.main-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 20px;
-}
-
-.ps-logo img {
-  height: 60px;
-  object-fit: contain;
-}
-
-.ps-nav ul {
-  display: flex;
   align-items: center;
-  gap: 25px;
+  padding: 12px 40px;
+  background: #111;
+  color: #fff;
 }
 
-.ps-nav a {
-  font-size: 14px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #333;
-  padding: 8px 0;
+.logo-area .logo {
+  height: 55px;
+}
+
+/* CENTER NAV */
+
+.nav-center ul {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-center ul li a {
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-center ul li a:hover,
+.nav-center ul li a.active {
+  color: #ff7a00;
+}
+
+/* DROPDOWN */
+
+.dropdown {
   position: relative;
 }
 
-.ps-nav a::after {
-  content: "";
+.dropdown-menu {
   position: absolute;
+  top: 32px;
   left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: #f3a11b;
-  transition: width 0.25s ease;
-}
-
-.ps-nav a:hover::after,
-.ps-nav a.active::after {
-  width: 100%;
-}
-
-/* Dropdown */
-.has-dropdown {
-  position: relative;
-}
-
-.has-dropdown .dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 220px;
-  background: #1c2331;
+  background: #222;
+  list-style: none;
   padding: 10px 0;
   display: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  min-width: 190px;
+  border-radius: 4px;
+  z-index: 99;
 }
 
-.has-dropdown:hover .dropdown {
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 16px;
+  color: #fff;
+}
+
+.dropdown-menu li a:hover {
+  background: #ff7a00;
+}
+
+.dropdown:hover .dropdown-menu {
   display: block;
 }
 
-.has-dropdown .dropdown li a {
-  display: block;
-  padding: 8px 16px;
-  font-size: 13px;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-}
+/* RIGHT CONTACT INFO */
 
-.has-dropdown .dropdown li a:hover {
-  background: #f3a11b;
-  color: #1c2331;
-}
-
-/* Right contact area */
-.ps-nav-contact {
+.nav-right {
   display: flex;
   align-items: center;
   gap: 15px;
-  font-size: 13px;
 }
 
-.ps-nav-contact a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #555;
+.info-item {
+  color: #ff7a00;
+  font-size: 14px;
 }
 
-.ps-nav-contact a:hover {
-  color: #f3a11b;
+.info-item:hover {
+  color: #fff;
 }
 
-/* Simple icons */
-.ps-icon-phone,
-.ps-icon-mail {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 1px solid #f3a11b;
+.wa-icon {
+  width: 28px;
+  filter: brightness(90%);
+  transition: 0.3s;
 }
 
-.ps-nav-whatsapp img {
-  width: 26px;
-  height: 26px;
-  object-fit: contain;
+.wa-icon:hover {
+  filter: brightness(120%);
 }
 
-/* ================= HERO SLIDER ================= */
+/* =============== HOME SLIDER =============== */
 
-.ps-hero-slider {
+.hero-slider {
   position: relative;
-  height: 70vh;
-  min-height: 420px;
+  width: 100%;
+  height: 420px;
   overflow: hidden;
 }
 
-.ps-hero-slide {
+.slide {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   opacity: 0;
-  transform: scale(1.05);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 0.8s;
 }
 
-.ps-hero-slide.active {
+.slide.active {
   opacity: 1;
-  transform: scale(1);
 }
 
-.ps-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
-}
+/* =============== 6 ORANGE BOXES (OVERLAY) =============== */
 
-.ps-hero-content {
+.service-box-overlay {
   position: relative;
-  max-width: 650px;
-  padding: 40px 15px;
-  margin: 0 auto;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #fff;
-}
-
-.ps-hero-content h1 {
-  font-size: 36px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-}
-
-.ps-hero-content p {
-  font-size: 15px;
-  margin-bottom: 10px;
-}
-
-.ps-hero-buttons {
-  margin-top: 14px;
+  margin-top: -70px;   /* slider ke upar lane ke liye */
+  z-index: 5;
   display: flex;
-  gap: 12px;
+  justify-content: center;
 }
 
-/* Slider dots */
-.ps-hero-dots {
-  position: absolute;
-  bottom: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-}
-
-.ps-hero-dots span {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 1px solid #fff;
-  cursor: pointer;
-  opacity: 0.6;
-}
-
-.ps-hero-dots span.active {
-  background: #f3a11b;
-  border-color: #f3a11b;
-  opacity: 1;
-}
-
-/* BUTTONS */
-.ps-btn {
-  display: inline-block;
-  padding: 10px 22px;
-  border-radius: 2px;
-  border: 1px solid transparent;
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.ps-btn-primary {
-  background: #f3a11b;
-  border-color: #f3a11b;
-  color: #1c2331;
-}
-
-.ps-btn-primary:hover {
-  background: #d78f15;
-  border-color: #d78f15;
-}
-
-.ps-btn-outline {
-  background: transparent;
-  border-color: #fff;
-  color: #fff;
-}
-
-.ps-btn-outline:hover {
-  background: #fff;
-  color: #1c2331;
-}
-
-/* ================= HOME SERVICES CARDS ================= */
-
-.ps-services-home {
-  background: #f4f4f4;
-}
-
-.ps-services-home h2 {
-  text-align: center;
-  font-size: 24px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-  color: #333;
-}
-
-.ps-services-grid {
+.service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  gap: 15px;
+  width: 90%;
+  max-width: 1100px;
 }
 
-.ps-service-card {
-  background: #f3a11b;
-  color: #fff;
-  padding: 20px 18px;
-  border-radius: 4px;
+.service-card {
+  background: #ff7a00;
+  padding: 18px 15px;
   text-align: center;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.ps-service-card h3 {
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 8px;
-}
-
-.ps-service-card p {
-  font-size: 14px;
-}
-
-.ps-service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-}
-
-/* ================= PAGE HERO (ABOUT, CONTACT, SERVICES) ================= */
-
-.ps-page-hero {
-  background: #1f2733;
-  color: #ffffff;
-  padding: 45px 15px 30px;
-}
-
-.ps-about-hero {
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.ps-about-hero .ps-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-}
-
-.ps-page-hero-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.ps-page-hero-inner h1 {
-  font-size: 32px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.ps-page-hero-contact {
-  background: #1f2733;
-}
-
-.ps-page-hero-right {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.ps-hero-circle {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
-}
-
-.ps-hero-text p {
-  font-size: 16px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.ps-breadcrumb {
-  max-width: 1200px;
-  margin: 8px auto 0;
-  font-size: 12px;
-  color: #c7c7c7;
-}
-
-/* ================= ABOUT CONTENT ================= */
-
-.ps-about-content p {
-  margin-bottom: 12px;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
   font-size: 15px;
+  transition: 0.3s;
 }
 
-.ps-about-content h2 {
-  font-size: 22px;
-  margin-bottom: 16px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.service-card:hover {
+  background: #d66800;
+  transform: translateY(-4px);
 }
 
-/* ================= SERVICES PAGE DETAILS ================= */
+/* =============== HOME HERO TEXT SECTION =============== */
 
-.ps-services-list .ps-service-detail {
-  margin-bottom: 24px;
+.home-hero {
+  background: #fff;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 35px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
-.ps-services-list h2 {
-  font-size: 20px;
-  margin-bottom: 6px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.home-hero h1 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #222;
 }
 
-/* ================= CONTACT PAGE ================= */
-
-.ps-contact-section {
-  background: #f4f4f4;
-  padding: 40px 15px 60px;
-}
-
-.ps-contact-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr 1.3fr;
-  gap: 40px;
-}
-
-.ps-contact-form h2 {
-  font-size: 20px;
-  margin-bottom: 18px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #333;
-}
-
-.ps-form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 14px;
-}
-
-.ps-form-row-full {
-  grid-template-columns: 1fr;
-}
-
-.ps-field label {
-  display: block;
-  font-size: 13px;
-  margin-bottom: 4px;
-  color: #555;
-}
-
-.ps-field label span {
-  color: #c0392b;
-}
-
-.ps-field input,
-.ps-field textarea {
-  width: 100%;
-  padding: 8px 10px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  border-radius: 2px;
-  outline: none;
-}
-
-.ps-field input:focus,
-.ps-field textarea:focus {
-  border-color: #f3a11b;
-}
-
-.ps-empty-field {
-  visibility: hidden;
-}
-
-/* Fake captcha */
-.ps-captcha-placeholder {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: #666;
-}
-
-/* Right column */
-.ps-contact-photo img {
-  width: 100%;
-  border-radius: 2px;
-  margin-bottom: 18px;
-}
-
-.ps-contact-text p {
-  font-size: 14px;
+.home-hero p {
   margin-bottom: 10px;
+  font-size: 16px;
   color: #444;
 }
 
-.ps-contact-text h3 {
+.home-hero h3 {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #ff7a00;
+}
+
+/* =============== GENERIC BANNERS (ABOUT / CONTACT / SERVICES) =============== */
+
+.about-banner,
+.contact-banner,
+.service-banner {
+  position: relative;
+  height: 280px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-banner img,
+.contact-banner img,
+.service-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  color: #fff;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.banner-text h1 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+/* =============== ABOUT PAGE =============== */
+
+.about-section {
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.about-section h2 {
+  color: #ff7a00;
+  margin-bottom: 18px;
+  font-size: 26px;
+}
+
+.about-section p {
+  color: #333;
   font-size: 16px;
-  margin: 10px 0;
+  line-height: 1.7;
+  margin-bottom: 12px;
 }
 
-/* ================= FOOTER ================= */
-
-.ps-footer {
-  background: #181e27;
-  color: #f2f2f2;
-  padding: 35px 15px 18px;
-  margin-top: 40px;
-}
-
-.ps-footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1.4fr;
-  gap: 30px;
-  font-size: 14px;
-}
-
-.ps-footer-logo {
-  height: 42px;
+.about-section h3 {
+  margin-top: 20px;
   margin-bottom: 8px;
+  color: #ff7a00;
+  font-size: 20px;
 }
 
-.ps-footer-col h4 {
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 10px;
+.values-list {
+  list-style: none;
+  padding-left: 0;
 }
 
-.ps-footer-col ul li + li {
-  margin-top: 6px;
+.values-list li {
+  margin-bottom: 8px;
+  font-size: 16px;
 }
 
-.ps-footer-col a {
-  color: #f2f2f2;
+/* =============== SERVICE DETAIL PAGES =============== */
+
+.service-section {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto 50px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
 }
 
-.ps-footer-col a:hover {
-  color: #f3a11b;
+.service-section h2 {
+  color: #ff7a00;
+  margin-bottom: 18px;
+  font-size: 24px;
 }
 
-.ps-footer-bottom {
+.service-section p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.service-section h3 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #ff7a00;
+  font-size: 20px;
+}
+
+.service-list {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.service-list li {
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+/* =============== CONTACT PAGE =============== */
+
+.contact-section {
+  width: 90%;
   max-width: 1200px;
-  margin: 10px auto 0;
-  padding-top: 10px;
-  border-top: 1px solid rgba(255,255,255,0.15);
-  font-size: 12px;
-  text-align: center;
+  margin: 50px auto;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
 }
 
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 900px) {
-  .ps-header-inner {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .ps-nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .ps-nav-contact {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .ps-contact-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .ps-hero-slider {
-    height: auto;
-    min-height: 360px;
-  }
-
-  .ps-hero-content {
-    top: auto;
-    transform: none;
-    padding: 40px 15px 80px;
-  }
+.contact-form-area {
+  flex: 1;
 }
 
-@media (max-width: 700px) {
-  .ps-services-grid {
+.contact-form-area h2 {
+  color: #ff7a00;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.contact-form-area p {
+  margin-bottom: 16px;
+  color: #ddd; /* contact page mostly dark bg, adjust later if needed */
+}
+
+/* FORM BOX */
+
+.contact-form {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form select {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Button style – contact page ke background ke hisaab se */
+
+.contact-form button {
+  padding: 12px;
+  background: #ff7a00;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #d66800;
+}
+
+/* RIGHT IMAGE */
+
+.contact-image {
+  flex: 1;
+}
+
+.contact-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* =============== SMALL UTILITIES =============== */
+
+.active {
+  color: #ff7a00 !important;
+}
+
+/* =============== RESPONSIVE =============== */
+
+@media (max-width: 992px) {
+  .main-header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .nav-center ul {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-right {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-slider {
+    height: 320px;
+  }
+
+  .service-box-overlay {
+    margin-top: -50px;
+  }
+
+  .service-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .contact-section {
+    flex-direction: column;
+  }
 }
 
-@media (max-width: 520px) {
-  .ps-services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ps-footer-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .ps-page-hero-inner {
-    flex-direction: column;
+@media (max-width: 600px) {
+  .main-header {
     align-items: flex-start;
-    gap: 12px;
   }
 
-  .ps-page-hero-right {
-    gap: 10px;
-  }
-
-  .ps-form-row {
+  .service-grid {
     grid-template-columns: 1fr;
+  }
+
+  .banner-text {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .about-section,
+  .service-section,
+  .home-hero {
+    padding: 20px 16px;
+  }
+
+  .home-hero h1 {
+    font-size: 22px;
   }
 }
