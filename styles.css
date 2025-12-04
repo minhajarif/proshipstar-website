@@ -346,10 +346,10 @@ img {
 
 .contact-form-area p {
   margin-bottom: 16px;
-  color: #ddd; /* contact page mostly dark bg, adjust later if needed */
+  color: #444;
 }
 
-/* FORM BOX */
+/* FORM */
 
 .contact-form {
   display: grid;
@@ -365,7 +365,7 @@ img {
   font-size: 15px;
 }
 
-/* Button style – contact page ke background ke hisaab se */
+/* Button */
 
 .contact-form button {
   padding: 12px;
