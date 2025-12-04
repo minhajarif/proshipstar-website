@@ -1,34 +1,35 @@
-// HERO SLIDER LOGIC
+// ========== IMAGE SLIDER AUTO PLAY ========== //
 
-const slides = document.querySelectorAll(".ps-hero-slide");
-const dotsContainer = document.querySelector(".ps-hero-dots");
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
 
-if (slides.length && dotsContainer) {
-  let current = 0;
+function showSlides() {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slideIndex++;
 
-  // create dots
-  slides.forEach((_, index) => {
-    const dot = document.createElement("span");
-    if (index === 0) dot.classList.add("active");
-    dot.addEventListener("click", () => goToSlide(index));
-    dotsContainer.appendChild(dot);
-  });
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
 
-  const dots = dotsContainer.querySelectorAll("span");
-
-  function goToSlide(index) {
-    slides[current].classList.remove("active");
-    dots[current].classList.remove("active");
-    current = index;
-    slides[current].classList.add("active");
-    dots[current].classList.add("active");
-  }
-
-  function nextSlide() {
-    let next = current + 1;
-    if (next >= slides.length) next = 0;
-    goToSlide(next);
-  }
-
-  setInterval(nextSlide, 5000);
+    slides[slideIndex - 1].classList.add("active");
 }
+
+// Slider change every 4 seconds
+setInterval(showSlides, 4000);
+
+// Run first slide immediately
+showSlides();
+
+
+
+// ========== MOBILE RESPONSIVE FUTURE FIX (if navbar toggle needed) ========== //
+
+// You can use this in future if you add hamburger menu
+/*
+const menuBtn = document.querySelector(".menu-btn");
+const navMenu = document.querySelector(".nav-center ul");
+
+menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+*/
